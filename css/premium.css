@@ -1,0 +1,33 @@
+/* Premium CSS */
+/* 3D CARD EFFECT */
+
+  /* FAQ */
+  .faq-question {
+    width: 100%;
+    padding: 15px;
+    background: #111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .faq-answer {
+    display: none;
+    padding: 10px;
+  }
+  
+  /* TESTIMONIAL */
+  .testimonial {
+    display: none;
+    text-align: center;
+  }
+  .testimonial.active {
+    display: block;
+  }
+  
+  /* CONTACT */
+  .contact-new-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }

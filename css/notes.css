@@ -1,0 +1,201 @@
+/* notes.css - Modern & Professional Educational UI */
+
+:root {
+  --primary-red: #e63946;
+  --secondary-blue: #1d3557;
+  --accent-cyan: #00f5ff;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --transition-smooth: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.notes-page {
+  background: radial-gradient(circle at top right, #0a0a1a, #050510);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.notes-hero {
+  padding: 120px 0 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.notes-hero h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
+  background: linear-gradient(to right, #fff, var(--primary-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.notes-hero p {
+  font-size: 1.2rem;
+  color: #a0a0c0;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Search and Filters */
+.notes-controls {
+  max-width: 900px;
+  margin: 60px auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 18px 25px 18px 60px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.1rem;
+  backdrop-filter: blur(10px);
+  transition: var(--transition-smooth);
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--primary-red);
+  box-shadow: 0 0 20px rgba(230, 57, 70, 0.3);
+}
+
+/* Grid & Layout */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.section-header {
+  margin-bottom: 50px;
+  border-left: 5px solid var(--primary-red);
+  padding-left: 25px;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.section-header p {
+  color: #a0a0c0;
+  max-width: 1000px;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+/* Premium Card Styling */
+.note-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.note-card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(230, 57, 70, 0.5);
+  box-shadow: var(--card-shadow);
+}
+
+.card-img-wrapper {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.note-card:hover .card-img-wrapper img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.card-content p {
+  color: #b0b0d0;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Modern Buttons */
+.btn-notes {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, var(--primary-red), #ff4d5a);
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.btn-notes:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .notes-hero {
+    padding: 100px 0 40px;
+  }
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+}

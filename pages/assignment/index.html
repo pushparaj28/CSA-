@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSA Assignment Portal | 2025-2026 Batch</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/navbar.css" />
+  <link rel="stylesheet" href="/css/marquee.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+  <link rel="stylesheet" href="/css/assignments.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="/js/layout.js" defer></script>
+</head>
+<body class="assignments-page">
+
+  <!-- Header and Footer are injected by layout.js -->
+
+  <main class="container" style="padding-top: 130px; padding-bottom: 50px;">
+    
+    <!-- Hero Section -->
+    <section class="assignment-hero">
+      <h1>CSA Assignment Portal <i class="fas fa-book-bookmark" style="color: var(--neon-blue);"></i></h1>
+      <p>Trade-wise Assignments for Practice & Learning 🚀</p>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <div class="section-tab-container">
+      <button class="tab-btn active" data-target="theory">Trade Theory</button>
+      <button class="tab-btn" data-target="methodology">Trade Methodology</button>
+    </div>
+
+    <!-- 1. Trade Theory Assignments -->
+    <section id="theory" class="assignment-section active">
+      
+      <!-- HTML -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fab fa-html5"></i> HTML Assignments</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is HTML? Explain the basic structure of HTML with a complete code example.</li>
+            <li>Explain different types of HTML tags (Block-level vs Inline) with practical examples.</li>
+            <li>Create a webpage structure that demonstrates the use of nested lists and complex tables.</li>
+            <li>What are semantic tags in HTML5? List at least 5 and explain their SEO importance.</li>
+            <li>Develop a complete student registration form using all types of input fields and validation.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fab fa-css3-alt"></i> CSS Assignments</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>Define CSS. Explain the three different ways to link CSS to an HTML document.</li>
+            <li>What are CSS selectors? Explain Class, ID, and Attribute selectors with examples.</li>
+            <li>Explain the CSS Box Model in detail with height, width, padding, border, and margin.</li>
+            <li>Create a responsive layout using Flexbox that works for both mobile and desktop screens.</li>
+            <li>What is the difference between Relative, Absolute, and Fixed positioning? Demonstrate each.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fab fa-js"></i> JavaScript Assignments</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is JavaScript? Explain the primary data types available in JS.</li>
+            <li>Explain the difference between 'var', 'let', and 'const' with scope examples.</li>
+            <li>Write a script to check if a number is prime and display the result in the console.</li>
+            <li>What is DOM Manipulation? Create a button that changes the color of a text on click.</li>
+            <li>Explain Higher-Order functions in JS like map(), filter(), and reduce() with usage.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- PHP -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fab fa-php"></i> PHP Assignments</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is Server-side scripting? Explain how PHP interacts with the web server.</li>
+            <li>Explain SuperGlobal variables in PHP like $_GET, $_POST, and $_SESSION.</li>
+            <li>Create a PHP login script that validates credentials against a hardcoded array.</li>
+            <li>What are PHP Loops? Write a script to display the Fibonacci series up to 10 terms.</li>
+            <li>Explain how to connect a PHP script to a MySQL database using PDO or MySQLi.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Java -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fab fa-java"></i> Java Assignments</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What are the core features of Java? Explain 'Platform Independence'.</li>
+            <li>Define OOPs concepts: Encapsulation, Inheritance, Polymorphism, and Abstraction.</li>
+            <li>Write a Java class to demonstrate Constructor Overloading with different parameters.</li>
+            <li>Explain Exception Handling in Java using try-catch blocks and final keyword.</li>
+            <li>What are Collections in Java? Explain the working of ArrayList vs HashMap.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Networking -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-network-wired"></i> Networking Assignments</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>Explain the OSI Model with a detailed description of all 7 layers.</li>
+            <li>What is IP Addressing? Differentiate between IPv4 and IPv6 protocols.</li>
+            <li>Define Networking Topologies: Bus, Star, Mesh, and Ring with diagrams.</li>
+            <li>What is a DNS (Domain Name System)? Explain how it resolves URLs to IP addresses.</li>
+            <li>Explain the role of Routers, Switches, and Hubs in a Large Area Network (LAN).</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- DBMS -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-database"></i> DBMS Assignments</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is DBMS? Explain the difference between Relational and Non-Relational databases.</li>
+            <li>Explain ACID properties in database transactions with real-world examples.</li>
+            <li>What is Database Normalization? Explain 1NF, 2NF, and 3NF with tables.</li>
+            <li>Write SQL queries for basic CRUD operations: Select, Insert, Update, and Delete.</li>
+            <li>What are Primary Keys and Foreign Keys? Explain their role in data integrity.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Advance Excel -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-file-excel"></i> Advance Excel Assignments</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>Explain the use of VLOOKUP and HLOOKUP functions with syntax and examples.</li>
+            <li>What are Pivot Tables? Explain how to summarize large data sets using them.</li>
+            <li>How to use conditional formatting to highlight data based on specific criteria?</li>
+            <li>Explain Data Validation features in Excel to restrict user input to a specific list.</li>
+            <li>What are Excel Macros? Explain how to record and run a simple task automation.</li>
+          </ol>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 2. Trade Methodology Assignments -->
+    <section id="methodology" class="assignment-section">
+      
+      <!-- Unit 1 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-user-tie"></i> Unit 1 – Roles & Responsibilities</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>Define the primary roles of a Vocational Instructor in the modern industrial world.</li>
+            <li>What are the professional ethics and behaviors expected from an elite trainer?</li>
+            <li>How does an instructor maintain safety and discipline in an industrial workshop?</li>
+            <li>Explain the responsibility of an instructor towards student career guidance.</li>
+            <li>What is the impact of an instructor's personality on student learning motivation?</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 2 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-brain"></i> Unit 2 – Psychology of Learning</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is Educational Psychology? Explain its importance in vocational teaching.</li>
+            <li>Explain the 'Laws of Learning' given by Edward Thorndike in detail.</li>
+            <li>How do cognitive and industrial environments affect the learning pace of students?</li>
+            <li>Define Motivation. Explain the difference between Intrinsic and Extrinsic motivation.</li>
+            <li>How do adult learners differ from school students in their psychological approach?</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 3 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-layer-group"></i> Unit 3 – Course Construction</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>Explain the systematic steps involved in syllabus analysis for a new trade.</li>
+            <li>What is Task Analysis? How does it help in breaking down complex skills?</li>
+            <li>Define Course Construction principles: Simple to Complex, and Known to Unknown.</li>
+            <li>What is the difference between a Curriculum and a Syllabus?</li>
+            <li>How to determine the time allocation for theory vs practical in a course?</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 4 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-pencil-ruler"></i> Unit 4 – Planning for Instruction</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is a Lesson Plan? Explain the components of a perfect Lesson Plan.</li>
+            <li>Explain the 'Four Step Method' of teaching: Preparation, Presentation, Application, Test.</li>
+            <li>What is a Demonstration Plan? How is it different from a Lesson Plan?</li>
+            <li>How do we select teaching aids to support a technical skill demonstration?</li>
+            <li>Explain the importance of classroom environmental planning before a lecture.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 5 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-laptop-code"></i> Unit 5 – Instructional Technology</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is AV (Audio-Visual) technology? List its benefits in technical training.</li>
+            <li>Explain the use of Interactive Whiteboards and Projectors in modern classrooms.</li>
+            <li>How can digital simulations improve student understanding of abstract mechanics?</li>
+            <li>What are the limitations of using technology-only approach in skill training?</li>
+            <li>Explain the concept of 'Hypermedia' and its role in vocational learning.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 6 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-file-alt"></i> Unit 6 – Written Instructional Materials</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is WIM (Written Instructional Material)? List different types of WIM.</li>
+            <li>Explain the purpose of an 'Information Sheet' vs an 'Operation Sheet'.</li>
+            <li>How to design a 'Job Sheet' for a workshop practical assignment?</li>
+            <li>What are 'Self-Study' materials? How do they help in adult learning?</li>
+            <li>Explain the importance of technical drawings and diagrams in WIM.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 7 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-check-double"></i> Unit 7 – Assessment & Certification</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>Differentiate between Formative and Summative assessment methods.</li>
+            <li>What is a 'Rubric'? How is it used to grade technical skills fairly?</li>
+            <li>Explain the importance of 'Continuous Assessment' in a vocational trade.</li>
+            <li>What is the role of 'External Certification' in validating a student's skills?</li>
+            <li>Write 5 types of objective questions used in trade theory examinations.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 8 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-tasks"></i> Unit 8 – Organisation & Management</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>How to organize a technical workshop to ensure maximum workflow efficiency?</li>
+            <li>Explain 'Inventory Management' for consumables and tools in a lab.</li>
+            <li>What is 5S methodology? Explain its application in industrial training institutes.</li>
+            <li>How to manage a diverse group of students with varying skill levels?</li>
+            <li>Explain the importance of keeping maintenance records for heavy machinery.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 9 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-comments"></i> Unit 9 – Counseling & Mentoring</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is the difference between Counseling and Mentoring in an educational setting?</li>
+            <li>How can an instructor identify a student who needs emotional or career support?</li>
+            <li>Explain 'Career Counseling' steps for technical students entering the industry.</li>
+            <li>What are the key listening skills required for an effective mentor?</li>
+            <li>How to handle student conflicts in a group project or workshop?</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 10 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-chart-line"></i> Unit 10 – Entrepreneurship</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is Entrepreneurship? List the characteristics of a successful entrepreneur.</li>
+            <li>How can technical students convert their trade skills into a startup business?</li>
+            <li>Explain the basic components of a professional Business Plan.</li>
+            <li>What are the government schemes available to support small technical businesses?</li>
+            <li>Define 'Market Research' and its importance before launching a service.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 11 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-satellite-dish"></i> Unit 11 – ICT & Distance Learning</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is ICT? Explain its role in making vocational training accessible globally.</li>
+            <li>Define 'E-Learning'. Compare synchronous vs asynchronous distance learning.</li>
+            <li>What is an LMS (Learning Management System)? Give examples like Moodle or Canvas.</li>
+            <li>How can virtual workshops bridge the gap for students in remote locations?</li>
+            <li>Explain the challenges and security risks in digital distance education.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 12 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-certificate"></i> Unit 12 – NSQF & QP</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is NSQF (National Skills Qualifications Framework)? Explain its structure.</li>
+            <li>Define 'Qualification Pack (QP)' and 'National Occupational Standards (NOS)'.</li>
+            <li>How does NSQF help in industry-aligned skill standardization?</li>
+            <li>Explain the concept of 'Vertical and Horizontal Mobility' in the NSQF framework.</li>
+            <li>How are job roles mapped to QP levels in the vocational education system?</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 13 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-users-cog"></i> Unit 13 – Adult Learning</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is Andragogy? Contrast it with the traditional Pedagogy method.</li>
+            <li>Explain Malcolm Knowles' 6 principles of Adult Learning in detail.</li>
+            <li>Why do adult learners prefer practical applications over theoretical lectures?</li>
+            <li>How to address 'Resistance to Change' in experienced adult learners?</li>
+            <li>What is the role of prior experience in the adult learning process?</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 14 -->
+      <div class="subject-card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3><i class="fas fa-award"></i> Unit 14 – Professional Development</h3>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="card-content">
+          <ol class="questions-list">
+            <li>What is CPD (Continuous Professional Development) for a vocational instructor?</li>
+            <li>How can instructors stay updated with the rapidly changing industry technologies?</li>
+            <li>Explain the importance of networking with industry professionals and peers.</li>
+            <li>What are 'Soft Skills'? Why are they critical for an instructor's success?</li>
+            <li>How to publish a research paper or a technical manual in your specific trade?</li>
+          </ol>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer Credits -->
+    <div class="assignment-credits" style="text-align: center; padding: 40px 0; color: #8892b0; font-style: italic;">
+      <p>"CSA 2nd Shift — Dilo Me Basne Wala Batch 💙"</p>
+    </div>
+
+  </main>
+
+  <script>
+    // Tab Switching Logic
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.assignment-section');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        sections.forEach(sec => {
+          sec.classList.remove('active');
+          if (sec.id === target) sec.classList.add('active');
+        });
+      });
+    });
+
+    // Accordion Logic
+    function toggleCard(header) {
+      const card = header.parentElement;
+      const isOpen = card.classList.contains('open');
+      
+      if (!isOpen) {
+        card.classList.add('open');
+      } else {
+        card.classList.remove('open');
+      }
+    }
+  </script>
+</body>
+</html>

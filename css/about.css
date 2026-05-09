@@ -1,0 +1,114 @@
+/* about.css - Clean and Professional Styling for CSA About Page */
+
+/* Base container styling applied to semantic section elements instead of divs */
+body {
+    background-color: #fdfdfe;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Main Section Styling */
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+/* All Headings: Bold, Red, Professional */
+h1, h2 {
+    color: #e63946; /* Professional Red */
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Subtle line under main title removed in favor of direct underline */
+h1::after {
+    display: none;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* All Paragraphs: Justified, Clean Spacing, Professional Formatting */
+p {
+    text-align: justify;
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    color: #4a4a4a;
+    transition: all 0.3s ease;
+}
+
+/* Smooth spacing between headings and paragraphs */
+p + h2 {
+    margin-top: 50px;
+}
+
+/* Horizontal Rule for section separation without divs */
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 40px 0;
+    opacity: 0.6;
+}
+
+/* Simple emotional highlight for first paragraph */
+section > p:first-of-type {
+    font-size: 1.2rem;
+    color: #1d3557;
+    font-style: italic;
+    border-left: 4px solid #e63946;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+/* Emotional Footer Styling for the last paragraph */
+section > p:last-of-type {
+    text-align: center;
+    font-weight: 600;
+    color: #1d3557;
+    margin-top: 60px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    font-style: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+    }
+    h1 {
+        font-size: 1.8rem;
+        margin-top: 10px;
+    }
+    h2 {
+        font-size: 1.3rem;
+        margin-top: 30px;
+    }
+    p {
+        font-size: 1rem;
+        text-align: justify; /* Keep justify on mobile as requested */
+        hyphens: auto; /* Help justify look better on narrow screens */
+    }
+}

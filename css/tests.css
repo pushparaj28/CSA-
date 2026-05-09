@@ -1,0 +1,161 @@
+/* tests.css - Premium Mock Test & Examination UI */
+
+:root {
+  --test-primary: #3b82f6; /* Professional Blue for Exams */
+  --test-accent: #00f5ff;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tests-page {
+  background: radial-gradient(circle at top, #eef6ff 0%, #ffffff 100%);
+  color: #1e293b;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+/* Hero Style matching the request */
+.tests-hero {
+  padding: 140px 0 60px;
+  text-align: left;
+}
+
+.tests-hero .label-showcase {
+  text-transform: uppercase;
+  color: var(--test-primary);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.tests-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: #0d1e3a;
+  margin-bottom: 30px;
+  line-height: 1.1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Removed h1::before icon */
+
+.tests-hero p {
+  color: #4b5563;
+  max-width: 950px;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Specific Grid for Tests */
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin: 60px 0 100px;
+}
+
+/* Test Card Design - Updated for Light Theme */
+.test-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.test-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--test-primary);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.test-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--test-primary);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.test-img-wrapper {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.test-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.test-card:hover .test-img-wrapper img {
+  transform: scale(1.1);
+}
+
+.test-body {
+  padding: 30px;
+}
+
+.test-body h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.test-body p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.test-footer {
+  padding: 0 30px 30px;
+  margin-top: auto;
+}
+
+.btn-start-test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px;
+  background: var(--test-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  gap: 10px;
+  transition: var(--transition);
+}
+
+.btn-start-test:hover {
+  filter: brightness(1.2);
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .tests-hero {
+    padding: 100px 0 40px;
+  }
+}
