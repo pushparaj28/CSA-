@@ -25,17 +25,19 @@ const LAYOUT_CONFIG = {
   `,
   header: `
     <header class="header">
-      <div class="header-top container">
-        <a class="brand brand-stacked" href="/index.html">
-          <span class="brand-logo"><img src="/assets/images/logo.png" alt="IToT Logo" /></span>
-          <span class="brand-text-wrap">
-            <span class="brand-title">THE INSTITUTE OF TRAINING OF TRAINERS (IToT)</span>
-            <span class="brand-subtitle">Lucknow | Shaping Trainers, Building Tomorrow</span>
-          </span>
-        </a>
-      </div>
-
       <nav class="navbar container">
+        <div class="nav-left">
+          <a class="nav-brand" href="/index.html">
+            <div class="nav-logo">
+              <img src="/assets/images/logo.png" alt="Logo" />
+            </div>
+            <div class="nav-brand-text">
+              <span class="nav-brand-title">SSTRC</span>
+              <span class="nav-brand-subtitle">IToT Aliganj, Lucknow</span>
+            </div>
+          </a>
+        </div>
+        
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -47,9 +49,10 @@ const LAYOUT_CONFIG = {
           <li><a href="/pages/tests/index.html" id="nav-tests">Tests</a></li>
           <li><a href="/pages/assignment/index.html" id="nav-assignment">Assignment</a></li>
           <li><a href="/pages/projects/index.html" id="nav-projects">Projects</a></li>
+          <li><a href="/pages/stories/index.html" id="nav-stories">Student Stories</a></li>
           <li><a href="/pages/campus/index.html" id="nav-campus">Campus Life</a></li>
           <li><a href="/pages/gallery/index.html" id="nav-gallery">Gallery</a></li>
-          <li><a href="/pages/contact/index.html" id="nav-contact">Contact</a></li>
+          <li><a href="/pages/contact/index.html" id="nav-contact" class="nav-contact-btn">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -58,8 +61,8 @@ const LAYOUT_CONFIG = {
     <footer class="footer">
       <div class="container footer-grid">
         <div>
-          <h3>IToT Lucknow</h3>
-          <p>Building competent trainers for a stronger, skilled, and self-reliant India.</p>
+          <h3>SSTRC - IToT Lucknow</h3>
+          <p>State Staff Training and Research Center (SSTRC). Building competent trainers for a stronger, skilled, and self-reliant India.</p>
         </div>
         <div>
           <h4>Quick Links</h4>
@@ -68,6 +71,7 @@ const LAYOUT_CONFIG = {
             <li><a href="/pages/notes/index.html">Notes</a></li>
             <li><a href="/pages/tests/index.html">Tests</a></li>
             <li><a href="/pages/assignment/index.html">Assignment</a></li>
+            <li><a href="/pages/stories/index.html">Student Stories</a></li>
             <li><a href="/pages/contact/index.html">Contact</a></li>
           </ul>
         </div>
@@ -86,7 +90,7 @@ const LAYOUT_CONFIG = {
         </div>
       </div>
       <div class="copyright">
-        <p>&copy; 2026 The Institute of Training of Trainers, Lucknow. All rights reserved.</p>
+        <p>&copy; 2026 State Staff Training and Research Center (SSTRC) - IToT Aliganj, Lucknow. All rights reserved.</p>
       </div>
     </footer>
   `

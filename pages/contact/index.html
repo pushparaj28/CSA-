@@ -12,17 +12,133 @@
   <link rel="stylesheet" href="/css/hero.css" />
   <link rel="stylesheet" href="/css/marquee.css" />
   <link rel="stylesheet" href="/css/responsive.css" />
+  <link rel="stylesheet" href="/css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="/js/layout.js" defer></script>
 </head>
-<body>
-  <!-- Layout is injected by layout.js -->
+<body class="contact-page">
+  <!-- Header and Footer are injected by layout.js -->
 
   <main>
-    <section class="section">
-      <div class="container">
-        <p class="section-tag">Contact</p>
-        <h1 class="section-title">Contact IToT Lucknow</h1>
-        <p>Reach us for assignments, tests, and institute details. You can also use the enquiry form on the homepage for quick assistance from our team.</p>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="label">CONTACT US</span>
+          <h1>We'd Love to <br>Hear from You!</h1>
+          <p>Have a question, project in mind, or just want to say hello? We're here and ready to help.</p>
+          <a href="#contact-main" class="btn-hero-connect">
+            <i class="fas fa-paper-plane"></i> Let's Connect
+          </a>
+        </div>
+        <div class="hero-image-wrapper reveal">
+          <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=800&q=80" alt="Connect with us" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="contact-main" id="contact-main">
+      <div class="container contact-layout">
+        
+        <!-- Form Section -->
+        <div class="form-section reveal">
+          <span class="label-top">SEND US A MESSAGE</span>
+          <h2>Get in Touch</h2>
+          <p class="sub">Fill out the form and we'll get back to you as soon as possible.</p>
+          
+          <form class="contact-form-wrapper" id="contactForm" action="https://formspree.io/f/mpqbowlv" method="POST">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="name" placeholder="Your full name" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="emailAddr">Email Address</label>
+              <input type="email" id="emailAddr" name="email" placeholder="Your email address" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>How can we help you?</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Admission Help">Admission Help</option>
+                <option value="Notes/Assignments">Notes & Assignments</option>
+                <option value="Technical Support">Technical Support</option>
+                <option value="Feedback">Feedback</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-send">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div id="formStatus" style="margin-top: 15px; font-weight: 500;"></div>
+          </form>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section reveal">
+          <span class="label-top">CONTACT INFORMATION</span>
+          
+          <div class="info-cards">
+            <!-- Location -->
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="info-content">
+                <h4>Our Location</h4>
+                <p>IToT Lucknow, Aliganj Campus,<br>Lucknow, Uttar Pradesh, India</p>
+              </div>
+            </div>
+            
+            <!-- Email -->
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div class="info-content">
+                <h4>Email Us</h4>
+                <a href="mailto:hacktag1949@gmail.com">hacktag1949@gmail.com</a>
+                <a href="mailto:support@itotlucknow.com">support@itotlucknow.com</a>
+              </div>
+            </div>
+            
+            <!-- Call -->
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="info-content">
+                <h4>Call Us</h4>
+                <p>+91 (522) 123-4567</p>
+                <p>+91 (987) 654-3210</p>
+              </div>
+            </div>
+            
+            <!-- Working Hours -->
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-clock"></i></div>
+              <div class="info-content">
+                <h4>Working Hours</h4>
+                <p>Monday – Friday: 9:00 AM – 5:00 PM</p>
+                <p>Saturday – Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-section">
+            <span class="label-social">FOLLOW US</span>
+            <div class="social-links">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>

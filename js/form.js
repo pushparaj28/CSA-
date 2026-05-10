@@ -4,80 +4,60 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!form) return;
 
-  function setError(input, message) {
-    const group = input.closest(".input-group");
-    const errorEl = group?.querySelector(".error-text");
-    if (errorEl) errorEl.textContent = message;
-    input.style.borderColor = message ? "#d83a4d" : "#ccdafd";
-  }
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    
+    // Disable the button to prevent multiple clicks
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
 
-  function validate() {
-    let valid = true;
-    const name = form.querySelector("#name");
-    const email = form.querySelector("#email");
-    const phone = form.querySelector("#phone");
-    const course = form.querySelector("#course");
-    const message = form.querySelector("#message");
-
-    const nameValue = name?.value.trim() || "";
-    const emailValue = email?.value.trim() || "";
-    const phoneValue = phone?.value.trim() || "";
-    const courseValue = course?.value.trim() || "";
-    const msgValue = message?.value.trim() || "";
-
-    if (name && nameValue.length < 3) {
-      setError(name, "Please enter at least 3 characters.");
-      valid = false;
-    } else if (name) {
-      setError(name, "");
-    }
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email && !emailPattern.test(emailValue)) {
-      setError(email, "Enter a valid email address.");
-      valid = false;
-    } else if (email) {
-      setError(email, "");
-    }
-
-    const phonePattern = /^[6-9]\d{9}$/;
-    if (phone && !phonePattern.test(phoneValue)) {
-      setError(phone, "Enter a valid 10-digit Indian mobile number.");
-      valid = false;
-    } else if (phone) {
-      setError(phone, "");
-    }
-
-    if (course && !courseValue) {
-      setError(course, "Please select a course.");
-      valid = false;
-    } else if (course) {
-      setError(course, "");
-    }
-
-    if (message && msgValue.length < 10) {
-      setError(message, "Message must be at least 10 characters.");
-      valid = false;
-    } else if (message) {
-      setError(message, "");
-    }
-
-    return valid;
-  }
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (!validate()) {
-      if (status) {
-        status.textContent = "Please fix the highlighted fields.";
-        status.style.color = "#c7243a";
-      }
-      return;
-    }
-    form.reset();
     if (status) {
-      status.textContent = "Thank you! Your enquiry has been submitted successfully.";
-      status.style.color = "#0f8a41";
+      status.textContent = "Sending... Please wait.";
+      status.style.color = "#3b82f6";
+    }
+
+    const data = new FormData(event.target);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        if (status) {
+          status.textContent = "✅ Success! Your message has been sent.";
+          status.style.color = "#059669";
+        }
+        form.reset();
+      } else {
+        const result = await response.json();
+        if (result.errors) {
+          if (status) {
+            status.textContent = result.errors.map(error => error.message).join(", ");
+            status.style.color = "#dc2626";
+          }
+        } else {
+          if (status) {
+            status.textContent = "❌ Oops! Something went wrong. Check your Formspree ID.";
+            status.style.color = "#dc2626";
+          }
+        }
+      }
+    } catch (error) {
+      console.error("Form error:", error);
+      if (status) {
+        status.textContent = "❌ Network error. Please check your connection.";
+        status.style.color = "#dc2626";
+      }
+    } finally {
+      // Re-enable the button after 2 seconds to allow retries if it failed
+      setTimeout(() => {
+        if (submitBtn) submitBtn.disabled = false;
+      }, 2000);
     }
   });
 });

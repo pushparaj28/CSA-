@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Success stories of our brilliant students at SSTRC Lucknow." />
+  <title>Student Stories | SSTRC Lucknow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/navbar.css" />
+  <link rel="stylesheet" href="/css/stories.css" />
+  <link rel="stylesheet" href="/pages/stories/page-stories.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+  <script src="/js/layout.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="stories-hero">
+      <div class="container center">
+        <p class="section-tag">Success Stories</p>
+        <h1>Our Students, Their Journey</h1>
+        <p class="hero-desc">Discover how our trainees transformed their potential into professional success through dedication and quality training.</p>
+      </div>
+    </section>
+
+    <section class="stories-filter-section container">
+      <div class="filter-controls">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="studentSearch" placeholder="Search by name, skills or course..." />
+        </div>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All Stories</button>
+          <button class="filter-btn" data-filter="Web">Web Development</button>
+          <button class="filter-btn" data-filter="Design">Design</button>
+          <button class="filter-btn" data-filter="Backend">Backend</button>
+          <button class="filter-btn" data-filter="Infrastructure">Infrastructure</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="all-stories-grid section container">
+      <div id="storiesContainer" class="stories-main-grid">
+        <!-- Stories will be injected here by JS -->
+      </div>
+      
+      <div class="pagination-container center">
+        <button id="loadMoreBtn" class="btn btn-primary">Load More Stories</button>
+      </div>
+    </section>
+
+    <!-- Full Story Modal -->
+    <div id="storyModal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div id="modalBody" class="modal-body">
+          <!-- Modal content injected by JS -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/main.js"></script>
+  <script src="/pages/stories/stories-data.js"></script>
+  <script src="/pages/stories/stories-ui.js"></script>
+</body>
+</html>

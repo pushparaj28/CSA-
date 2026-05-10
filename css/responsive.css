@@ -36,7 +36,8 @@
 
   .about-image {
     order: -1;
-    height: 300px;
+    height: auto;
+    margin-bottom: 30px;
   }
 
   .stats-grid {
@@ -60,12 +61,12 @@
     height: 42px;
   }
 
-  .brand-title {
-    font-size: 0.95rem !important;
+  .nav-brand-subtitle {
+    display: none;
   }
 
-  .brand-subtitle {
-    font-size: 0.65rem !important;
+  .nav-brand-title {
+    font-size: 0.95rem;
   }
 
   .navbar.container {
@@ -165,8 +166,15 @@
     border-bottom: 0;
   }
 
-  .nav-links > li > a:active {
-    background: rgba(255, 255, 255, 0.1);
+  .nav-links > li > a.active {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-links > li > a.nav-contact-btn {
+    margin-left: 0;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
   }
 
   .dropdown-menu {
@@ -280,15 +288,8 @@
     height: 38px;
   }
 
-  .brand-title {
-    font-size: 0.82rem !important;
-    white-space: normal;
-    max-width: 280px;
-    margin: 0 auto;
-  }
-
-  .brand-subtitle {
-    font-size: 0.58rem !important;
+  .nav-brand-title {
+    font-size: 0.82rem;
   }
 }
 

@@ -61,23 +61,58 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin: 60px 0 100px;
+  perspective: 1500px; /* Essential for 3D effect */
 }
 
-/* Updated Card Styling to match image */
+/* Updated Card Styling for Flip Animation */
 .project-card {
-  background: #ffffff;
+  height: 420px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  perspective: 1500px;
+}
+
+.project-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .project-card-inner {
+  transform: rotateY(180deg);
+}
+
+.project-card-front, .project-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   border-radius: 24px;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
   display: flex;
   flex-direction: column;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+.project-card-front {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+.project-card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #fff;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
 }
 
 .project-img-wrapper {
@@ -93,15 +128,12 @@
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-img-wrapper img {
-  transform: scale(1.05);
-}
-
 .project-body {
-  padding: 32px;
+  padding: 25px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .project-body h3 {
@@ -114,14 +146,45 @@
 
 .project-body p {
   color: #64748b;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.5;
   margin-bottom: 0;
-  text-align: justify;
+  text-align: center;
+}
+
+/* Back face styling */
+.project-card-back h3 {
+  color: var(--accent-cyan);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.project-card-back p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tech-tag {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .btn-project {
-  display: none; /* In the reference image, the cards act as visual blocks without explicit buttons */
+  display: none;
 }
 
 @media (max-width: 1024px) {
