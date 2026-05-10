@@ -195,17 +195,16 @@
 }
 
 .nav-links > li > a:hover,
-.nav-links > li > a.active,
 .dropdown-toggle:hover {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   transform: none;
 }
 
 .nav-links > li > a.active {
-  background: rgba(255, 255, 255, 0.2);
   color: #fff;
-  box-shadow: none;
+  font-weight: 700;
+  background: transparent;
 }
 
 /* Contact Button Style */
