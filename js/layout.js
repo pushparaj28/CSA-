@@ -50,7 +50,6 @@ const LAYOUT_CONFIG = {
           <li><a href="/pages/assignment/index.html" id="nav-assignment">Assignment</a></li>
           <li><a href="/pages/projects/index.html" id="nav-projects">Projects</a></li>
           <li><a href="/pages/stories/index.html" id="nav-stories">Student Stories</a></li>
-          <li><a href="/pages/campus/index.html" id="nav-campus">Campus Life</a></li>
           <li><a href="/pages/gallery/index.html" id="nav-gallery">Gallery</a></li>
           <li><a href="/pages/contact/index.html" id="nav-contact" class="nav-contact-btn">Contact</a></li>
         </ul>

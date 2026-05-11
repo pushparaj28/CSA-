@@ -14,8 +14,10 @@
   <link rel="stylesheet" href="/css/hero.css" />
   <link rel="stylesheet" href="/css/marquee.css" />
   <link rel="stylesheet" href="/css/stories.css" />
+  <link rel="stylesheet" href="/css/faq-carousel.css" />
   <link rel="stylesheet" href="/css/responsive.css" />
   <script src="/js/layout.js" defer></script>
+  <script src="/js/faq-carousel.js" defer></script>
 </head>
 <body>
   <!-- Layout is injected by layout.js -->
@@ -478,6 +480,79 @@
             </div>
             <div class="card-border-glow"></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Futuristic FAQ Orbit Carousel -->
+    <section class="faq-orbit-section">
+      <div class="faq-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
+
+      <div class="faq-orbit-container">
+        <div class="faq-header reveal">
+          <h2 class="faq-left-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="orbit-stage reveal">
+          <div class="orbit-platform"></div>
+          
+          <!-- Orbit Cards -->
+          <div class="faq-card-orbit">
+            <span class="category-tag">Admission</span>
+            <h3>How can I join the CSA 2nd Shift batch?</h3>
+            <p>Admissions are handled through the standard IToT portal. Keep an eye on our admission notifications or visit the campus in Aliganj for direct guidance.</p>
+            <div class="card-footer">
+              <span class="card-icon"><i class="fas fa-sign-in-alt"></i></span>
+              <a href="/pages/contact/index.html" class="read-more-link">Learn More</a>
+            </div>
+          </div>
+
+          <div class="faq-card-orbit">
+            <span class="category-tag">Training</span>
+            <h3>What technologies are taught in CSA?</h3>
+            <p>We cover Full Stack Web Development (HTML, CSS, JS, PHP, MySQL), Networking Fundamentals, IT Infrastructure, and Advanced Excel tools.</p>
+            <div class="card-footer">
+              <span class="card-icon"><i class="fas fa-code"></i></span>
+              <a href="/pages/notes/index.html" class="read-more-link">View Notes</a>
+            </div>
+          </div>
+
+          <div class="faq-card-orbit">
+            <span class="category-tag">Placement</span>
+            <h3>Does SSTRC provide placement support?</h3>
+            <p>Yes! We have a dedicated placement cell that organizes job fairs, mock interviews, and connects students with leading IT firms across India.</p>
+            <div class="card-footer">
+              <span class="card-icon"><i class="fas fa-briefcase"></i></span>
+              <a href="/pages/placements/index.html" class="read-more-link">Stats</a>
+            </div>
+          </div>
+
+          <div class="faq-card-orbit">
+            <span class="category-tag">Portfolio</span>
+            <h3>Will I build real projects during the course?</h3>
+            <p>Absolutely. Every student works on multiple live projects that eventually go into their professional portfolio – essential for modern IT jobs.</p>
+            <div class="card-footer">
+              <span class="card-icon"><i class="fas fa-folder-open"></i></span>
+              <a href="/pages/projects/index.html" class="read-more-link">See Projects</a>
+            </div>
+          </div>
+
+          <div class="faq-card-orbit">
+            <span class="category-tag">Timeline</span>
+            <h3>What are the timings for the 2nd Shift?</h3>
+            <p>The 2nd Shift typically runs from 1:00 PM to 6:00 PM, allowing students to manage their personal routines while receiving intensive technical training.</p>
+            <div class="card-footer">
+              <span class="card-icon"><i class="fas fa-clock"></i></span>
+              <a href="#" class="read-more-link">Schedule</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="orbit-nav">
+          <!-- Dots injected by JS -->
         </div>
       </div>
     </section>

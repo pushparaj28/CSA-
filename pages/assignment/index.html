@@ -443,6 +443,20 @@
       <p>"CSA 2nd Shift — Dilo Me Basne Wala Batch 💙"</p>
     </div>
 
+    <!-- Assignment Modal -->
+    <div class="assignment-modal" id="assignmentModal">
+      <div class="modal-content-wrap">
+        <button class="modal-close-btn" id="closeModal">
+          <i class="fas fa-times"></i>
+        </button>
+        <span class="modal-subject-title" id="modalTitle">Subject Name</span>
+        <span class="modal-subject-subtitle" id="modalSubtitle">Subject Subtitle</span>
+        <div class="modal-questions-list" id="modalQuestions">
+          <!-- Content injected by JS -->
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <script>
@@ -462,6 +476,52 @@
           if (sec.id === target) sec.classList.add('active');
         });
       });
+    });
+
+    // Modal Logic
+    const modal = document.getElementById('assignmentModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    const modalQuestions = document.getElementById('modalQuestions');
+    const closeBtn = document.getElementById('closeModal');
+    const subjectCards = document.querySelectorAll('.subject-card');
+
+    subjectCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const title = card.querySelector('h3').innerText;
+        const subtitle = card.querySelector('p').innerText;
+        const questionsHtml = card.querySelector('.card-content').innerHTML;
+
+        modalTitle.innerText = title;
+        modalSubtitle.innerText = subtitle;
+        modalQuestions.innerHTML = questionsHtml;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scroll
+      });
+    });
+
+    function hideModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      // Small delay matching CSS transition for better feel
+      setTimeout(() => {
+        if(!modal.classList.contains('active')) {
+          modalQuestions.innerHTML = '';
+        }
+      }, 300);
+    }
+
+    closeBtn.addEventListener('click', hideModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) hideModal();
+    });
+
+    // Handle Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        hideModal();
+      }
     });
   </script>
 </body>
