@@ -272,15 +272,49 @@
 }
 
 @media (max-width: 768px) {
-  .faq-header h2 {
-    font-size: 2.5rem;
+  .faq-header h2.faq-left-title {
+    font-size: 2.2rem;
   }
   .orbit-stage {
     height: 450px;
   }
   .faq-card-orbit {
-    width: 290px;
-    height: 380px;
-    padding: 35px 25px;
+    width: 280px;
+    height: 360px;
+    padding: 30px 20px;
+  }
+  .faq-card-orbit h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-header h2.faq-left-title {
+    font-size: 1.8rem;
+  }
+  .orbit-stage {
+    height: 400px;
+  }
+  .faq-card-orbit {
+    width: 240px;
+    height: 320px;
+    padding: 25px 15px;
+  }
+  .faq-card-orbit h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  .faq-card-orbit p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+  .read-more-link {
+    font-size: 0.75rem;
+    padding: 6px 12px;
   }
 }
