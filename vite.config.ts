@@ -1,9 +1,32 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import fs from 'fs';
+import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig(({mode}) => {
+// Help Vite find all HTML files for the build
+function getEntries(dir, entries = {}) {
+  const files = fs.readdirSync(dir);
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.lstatSync(filePath);
+    if (stat.isDirectory()) {
+      if (file !== 'node_modules' && file !== 'dist' && file !== 'public') {
+        getEntries(filePath, entries);
+      }
+    } else if (file.endsWith('.html')) {
+      // Create a unique key for each HTML file
+      const relativePath = path.relative(__dirname, filePath);
+      const entryName = relativePath.replace(/\.html$/, '').replace(/[\\\/]/g, '_');
+      entries[entryName || 'main'] = path.resolve(__dirname, relativePath);
+    }
+  });
+  return entries;
+}
+
+const htmlEntries = getEntries(__dirname);
+
+export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
     plugins: [react(), tailwindcss()],
@@ -13,6 +36,11 @@ export default defineConfig(({mode}) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
+      },
+    },
+    build: {
+      rollupOptions: {
+        input: htmlEntries,
       },
     },
     server: {
